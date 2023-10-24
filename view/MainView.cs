@@ -8,26 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Supermarket_mvp.Views
+namespace Supermarket_mvpProvider.view
 {
-    public partial class MainView : Form, IMainView
+    public partial class MainView : Form
     {
         public MainView()
         {
             InitializeComponent();
-            BtnProvider.Click += delegate { ShowProviderView?.Invoke(this, EventArgs.Empty); };
-            
-
-            BtnExit.Click += delegate { this.Close(); };
-
-
         }
-
-        public event EventHandler ShowPayModeView;
-        public event EventHandler ShowProductView;
-        public event EventHandler ShowCustomerView;
-        public event EventHandler ShowProviderView;
-        public event EventHandler ShowCategorieView;
-        public event EventHandler ShowSellView;
     }
 }
